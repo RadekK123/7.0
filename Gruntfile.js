@@ -25,6 +25,28 @@ module.exports = function(grunt) {
     }
   },
 
+  autoprefixer: {
+    options: {
+      // Task-specific options go here. 
+    },
+    your_target: {
+      files: [{
+        expand: true,
+        cwd: 'css/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'css/',
+        ext: '.css'
+      }]
+    } 
+    },
+
+  watch: {
+  scripts: {
+    files: ['**/*.sass','css/*.css'],
+    tasks: ['sass', 'autoprefixer'],
+    options: {
+      spawn: false,
+    },
   },
 },
 
