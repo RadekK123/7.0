@@ -1,0 +1,30 @@
+{
+  "name": "gruntdemosass",
+  "version": "1.0.0",
+  "description": "Website grunt",
+  "main": "indeks.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RadekK123/"
+  },
+  "keywords": [
+    "first",
+    "grunt"
+  ],
+  "author": "Radek K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RadekK123/"
+  },
+  "homepage": "https://github.com/RadekK123/",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1"
+  }
+}

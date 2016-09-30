@@ -1,0 +1,581 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans'
+
+/*Variables*/
+
+$linkHover: #00c7e8
+$fontFamilly: 'Open Sans'
+
+@mixin fontStyle($font-familly: 'Open Sans', $font-size: 1rem, $font-weight: 500, $color: black)
+	font-family: $font-familly
+	font-size: $font-size
+	font-weight: $font-weight
+	color: $color
+
+@mixin aStyle($t-decoration: none, $t-transform: uppercase)
+	text-decoration: $t-decoration
+	text-transform: $t-transform
+
+@mixin posElem($position: absolute, $top: initial, $right: initial, $bottom: initial, $left: initial)
+	position: $position
+	top: $top
+	right: $right
+	bottom: $bottom
+	left: $left
+
+%data
+	display: inline-block
+	width: 200px
+	height: 200px
+	margin: 80px 20px
+	border-radius: 50%
+	background-color: #999999
+	text-align: center
+*
+	box-sizing: border-box
+	-webkit-user-select: none 
+	-moz-user-select: none   
+	-ms-user-select: none     
+	user-select: none 
+
+	::selection 
+		background-color: #00c7e8
+		color: #FFF
+
+body
+	margin: 0px
+
+	input, label 
+		display: none
+
+
+/* __________NAV STYLE_____________*/
+
+
+nav.row:before,
+nav.row:after
+	content: " "
+	display: table
+nav.row:after
+	clear: both
+
+nav.container
+	max-width: 1926px
+	display: table
+	width: 100%
+	margin: 0
+	background-color: #313332
+	height: 113px
+	border-top: 1px solid #81807c
+
+	.img > img 
+		@include posElem(absolute, 41.5px, initial, initial ,8%)
+		height: auto
+		width: 150px
+		cursor: pointer
+
+	ul.nav 
+		display: block
+		float: right
+		width: 50%
+		margin: 0 5% 0 0
+
+		li 
+			display: inline-block
+			list-style: none
+			width: calc(100% / 7)
+			text-align: center
+
+			a 
+				display: inline-block
+				height: 113px
+				width: 100%
+				padding: 0 2%
+				line-height: 113px
+				@include aStyle(none, uppercase)
+				@include fontStyle($fontFamilly, 1rem, 700, white)
+				&:hover 
+					color: $linkHover
+
+/*______________SECTION HERO_________________*/
+
+section.hero 
+	display: table
+	max-width: 1926px
+	width: 100%
+	height: 600px
+	border-bottom: 1px solid #d5d0ca
+	background: #000 url('https://hd.unsplash.com/photo-1467521335787-2f0fc0f0e9a0') 0/cover no-repeat
+	background-position: top left
+	background-attachment: fixed
+	position: relative
+	&:before, 
+	&:after 
+		content: " "
+		display: table
+	&:after 
+		clear: both
+
+	.slogan
+		@include posElem(absolute, 180px, 0, initial, initial) 
+		width: 40%
+		height: 30%
+		background-color: rgba(0, 0, 0, 0.55)
+		margin: 0
+
+		h1 
+			display: inline-block
+			line-height: 2.1rem
+			@include fontStyle('Open Sans', 2.2rem, normal, #FFF)
+			text-transform: uppercase
+			margin-left: 10%
+			margin-top: 5%
+
+			span 
+				font-weight: 900
+
+	.pagination
+		@include posElem(absolute, 85%, initial, initial, calc(50% - 250px/2))
+		width: 250px
+		height: 70px
+		text-align: center
+		border: 3px solid rgba(0, 0, 0, 0.20)
+		&:hover
+			border: 3px solid $linkHover
+
+		[class*="ball-"]
+			display: inline-block
+			width: 30px
+			height: 30px
+			padding: 0px
+			margin: 20px
+			border-radius: 50%
+			border: 2px solid #FFF
+			cursor: pointer
+			&:hover
+				border: 3px solid $linkHover
+
+		.active 
+			background-color: #FFF
+
+
+/*______________SECTION ADVENTAGE_________________*/
+
+section.advantage 
+	height: 500px
+	max-width: 1926px
+	width: 100%
+	margin: 0
+	&:before,
+	&:after
+		content: " "
+		display: table
+	&:after
+		clear: both
+
+	.common 
+		height: 400px
+		width: 100%
+		margin: 100px auto 0
+		text-align: center
+		cursor: pointer
+		&:before,
+		&:after 
+			content: ""
+			display: table
+		&:after 
+			clear: both
+
+		[class*="desc"]
+			display: inline-block
+			width: calc(90% / 3)
+			padding: 3.33%
+			&:hover > h2 
+				color: $linkHover
+			&:hover i.fa 
+				background-color: $linkHover
+				transform: scale(1.1,1.1)
+
+			h2 
+				@include fontStyle('Open Sans', 1rem, bold, #313332)
+				letter-spacing: .2rem
+				text-transform: uppercase
+				white-space: nowrap
+
+			p 
+				@include fontStyle($fontFamilly, 0.8rem, normal, #313332)
+				line-height: 1.2rem
+
+		i.fa
+			font-size: 4rem
+			line-height: 8rem
+			color: white
+			display: inline-block
+			width: 120px
+			height: 120px 
+			background-color: #313332
+			border-radius: 10px
+			cursor: pointer
+
+/*______________SECTION HEADING_________________*/
+
+section.heading 
+	max-width: 1926px
+	width: 100%
+	height: 200px
+	&:before,
+	&:after
+		content: " "
+		display: table
+	&:after 
+		clear: both
+
+	.pos-center 
+		width: 80%
+		margin: 0 auto
+		text-align: center
+		h1 
+			@include fontStyle($fontFamilly, 2.5rem, 900, #313332) 
+			text-transform: uppercase
+			&:hover 
+				color: $linkHover
+		p 
+			@include fontStyle($fontFamilly, 1rem, 500, #313332)
+			line-height: 1.2rem
+
+
+/*______________SECTION GALLERY_________________*/
+
+section.gallery 
+	max-width: 1926px
+	width: 100%
+	height: 400px
+	margin: 0
+
+	.container 
+		display: table
+		text-align: center
+		height: 200px
+		width: 100%
+		line-height: 0
+		&:before
+			content: " "
+			display: table
+		&:after
+			clear: both
+
+		.layer 
+			position: relative
+			display: inline-block
+			text-align: center
+			height: 200px
+			width: calc(100% / 5)
+			max-width: 200px
+
+			>img 
+				width: 100%
+				height: 100%
+
+
+			.icon-container 
+				@include posElem(absolute, 0, initial, initial, initial)
+				display: block
+				height: 100%
+				width: 100%
+				max-width: 200px
+				text-align: center
+				&:hover .fa:hover 
+					color: $linkHover
+					transform: scale(1.5,1.5)
+				&:hover 
+					background-color: rgba(0, 0, 0, .5)
+				&:hover i.fa 
+					opacity: 1
+					cursor: pointer
+
+				i.fa 
+					opacity: 0
+					display: inline-block
+					width: 50px
+					height: 50px
+					color: rgba(0, 0, 0, .8)
+					background-color: white
+					font-size: 2rem
+					line-height: 2.7rem
+					border-radius: 5px
+					margin-right: 5px
+					margin-top: calc(50% - 25px)
+					vertical-align: 0%
+					&:hover
+						color: #00c7e8
+						transform: scale(1.5,1.5)
+
+/*______________SECTION TEAM_________________*/
+
+section.team 
+	width: 100%
+	height: 360px
+
+	div.row1 
+		width: 100%
+		height: inherit
+		margin: 0 auto
+		text-align: center
+		&:before,
+		&:after
+			content: ""
+			display: table
+		&:after
+			clear: both		
+
+		.col 
+			float: left
+			width: 25%
+			height: inherit
+			margin: 0 auto
+
+			.people 
+				@extend %data
+				&:hover div.function 
+					opacity: 1
+				&:hover h2 
+					color: #00c7e8
+				&:hover 
+					cursor: pointer
+					background-color: rgba(0, 0, 0, .7)
+
+				h2 
+					margin-top: 220px
+					@include fontStyle($fontFamilly, 1rem, bold, #313332)
+					text-transform: uppercase
+
+				div.function 
+					opacity: 0
+					margin-top: -170px
+					@include fontStyle($fontFamilly, 1rem, bold, #00c7e8)
+
+
+/*______________SECTION DESCRIPTION_________________*/
+
+section.description 
+	display: table
+	width: 100%
+	height: 300px
+	margin: 0
+	padding: 0
+	&:before,
+	&:after
+		content: " "
+		display: table
+	&:after
+		clear: both
+
+	.container
+		width: 100%
+		height: 300px
+		margin: 0 auto
+
+	.row
+		width: 100%
+		height: 300px
+
+		[class*="col"]
+			height: 300px
+			padding: 0
+			margin: 0
+
+		.col1 
+			float: left
+			width: 30%
+			background-color: #838584
+
+			div.fot1 
+				width: 100%
+				height: 300px
+				display: block
+				background:  #838584
+				background-image: url('http://i.istockimg.com/image-zoom/20783083/3/265/380/stock-photo-20783083-a-woman-holding-a-mobile-phone.jpg')
+				background-size: 30%
+				background-repeat: no-repeat
+				background-position: center right
+
+		.col2 
+			float: left
+			width: 70%
+			height: 300px
+			background-color: #797b7a
+
+			.sub-row 
+				width: 100%
+				height: 300px
+				overflow: hidden
+
+				.sub-col1 
+					float: left
+					width: 70%
+					height: 200px
+					padding: 0 10%
+
+					p
+						@include fontStyle($fontFamilly, 0.9rem, normal, #FFF)
+						margin-top: 0
+						line-height: 1.5rem
+						overflow: hidden
+						text-overflow: ellipsis
+
+				.sub-col2 
+					float: left
+					width: 30%
+					height: 200px
+					padding: 0 5% 0 0
+
+					p
+						@include fontStyle($fontFamilly, 0.9rem, normal, #FFF)
+						margin-top: 0
+						line-height: 1.5rem
+						overflow: hidden
+						text-overflow: ellipsis
+
+				h1 
+					@include fontStyle($fontFamilly, 1.5rem, 900, #FFF)
+					margin-left: 10%
+					margin-top: 4%
+					text-transform: uppercase
+					font-size: 1.5rem
+
+/*______________SECTION NUMBERS_________________*/
+
+section.numbers 
+	display: table
+	width: 100%
+	height: auto
+	margin: 0 auto
+
+	.row 
+		width: 100%
+		height: 200px
+		text-align: center
+		margin: 0 auto
+
+		.col 
+			float: left
+			width: 25%
+			height: 200px
+			&:before,
+			&:after
+				content: " "
+				display: table
+			&:after
+				clear: both	
+
+			h1 
+				@include fontStyle($fontFamilly, 2.5rem, normal, #313332)
+				text-transform: uppercase
+				margin-top: 15%
+				margin-bottom: 1%
+
+			h2 
+				@include fontStyle($fontFamilly, 1rem, bold, $linkHover)
+				text-transform: uppercase
+		
+/*______________FOOTER_________________*/
+
+footer 
+	width: 100%
+	height: auto
+
+	[class*="row"]:before, 
+	[class*="row"]:after
+		content: " "
+		display: table
+	[class*="row"]:after 
+		clear: both
+
+	p 
+		padding-top: 20px
+		color: white
+		font-family: $fontFamilly
+		font-size: 1rem
+		line-height: 1.2rem
+		margin: 0
+
+	div.row1 
+		display: table
+		width: 100%
+		height: 300px
+		margin: 0 auto
+
+		.col 
+			float: left
+			width: calc(100% / 3)
+			height: 300px
+			padding: 3% 3% 0 3%
+			position: relative
+			background-color: #313332
+
+			.left 
+				display: inline-block
+				width: 40%
+
+			.right 
+				display: inline-block
+				width: 40%
+				height: 2px
+				margin-top: 10px
+				background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,199,232,0.65) 100%)
+
+			.allrow 
+				width: 100%
+				height: auto
+
+			span 
+				margin: 0px 0px 0px 10px
+				color: white
+
+			h2 
+				color: white
+				font-family: $fontFamilly
+				text-transform: uppercase
+				font-size: 1rem
+
+			p 
+				margin-top: 0
+				color: white
+				font-family: $fontFamilly
+				font-size: 1rem
+				line-height: 1.2rem
+
+		div.sub 
+
+			.left 
+				display: inline-block
+				width: 40%
+
+			.right 
+				display: inline-block
+				width: 40%
+				height: 2px
+				margin-top: 10px
+				background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,199,232,0.65) 100%)
+
+			[class*="sub-row-"]
+				width: 100%
+				height: 70px
+				margin: 0 auto
+
+				.sub-col1 
+					float: left
+					width: 30%
+					min-height: 1px
+
+				.sub-col2 
+					float: left
+					width: 70%
+					min-height: 1px
+
+	.row2 > div.pos-center 
+		background-color: #252726
+		color: white
+		width: 100%
+		height: 50px
+		text-align: center
+		margin: 0 auto

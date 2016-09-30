@@ -1,0 +1,682 @@
+/*Variables*/
+
+$linkHover: #00c7e8
+$fontFamilly: 'Open Sans'
+
+
+/*__________MEDIA QUERIES____________*/
+
+@media (max-width: 1200px) and (min-width: 1050px)
+
+	/* __________NAV STYLE_____________*/
+	.container ul.nav
+		width: 70%
+	
+@media (max-width: 1049px) and (min-width: 767px)
+
+	/* __________NAV STYLE_____________*/
+
+	nav.container ul.nav 
+		width: 80%
+		margin: 0
+	
+	nav.container .img > img 
+		left: 4%
+	
+
+	/*______________SECTION HERO_________________*/
+
+	section.hero .slogan 
+		width: 50%
+		padding-right: 5%
+	
+		h1 	
+			font-size: 2.2rem
+			line-height: 2.4rem
+	
+	/*______________SECTION ADVENTAGE_________________*/
+
+	section.advantage 
+		height: auto	
+
+	.common 
+		height: auto
+		width: 100%	
+
+	[class*="desc"]
+		display: block
+		width: 100%
+		padding: 3.33%
+	
+	/*______________SECTION GALLERY_________________*/
+
+	section.gallery 
+		position: relative
+		display: flex
+		justify-content: center
+		max-width: 1926px
+		width: 100%
+		height: 1000px
+		margin: 0 auto
+	
+		.container 		
+			display: block
+			float: left
+			text-align: center
+			height: auto
+			width: auto
+			line-height: 0
+	
+			.layer 
+				position: relative
+				display: block
+				text-align: center
+				height: 200px
+				width: 200px
+				max-width: 200px
+	
+				> img 
+					width: 200px
+					height: 100%
+	
+	/*______________SECTION TEAM_________________*/
+
+	section.team 
+		height: auto
+	
+		div.row1 
+			width: 100%
+			height: auto
+			margin: 0
+			text-align: center
+	
+			.col 
+				float: left
+				width: 50%
+				margin: 0
+				&:last-child 
+					margin-bottom: 40px
+	
+				.people 
+					position: relative
+					display: inline-block
+					margin: 30px
+					padding: 10px 0px
+					text-align: center
+	
+					h2 
+						display: inline-block
+						margin-top: 200px
+						margin-bottom: 10px
+	
+						div.function 
+							display: block
+							position: absolute
+							top: 0
+							left: 0
+							width: inherit
+							height: inherit
+							margin-top: 0
+							text-align: center
+	
+							p 
+								margin-top: 40%
+	
+
+	/*______________SECTION DESCRIPTION_________________*/
+
+	.description .container
+		width: 100%
+		height: auto
+		margin: 0 auto
+	
+		.row
+			width: 100%
+			height: 300px
+	
+			>[class*="col"]
+				height: 300px
+				padding: 0
+				margin: 0
+	
+			.col1 
+				float: left
+				width: 100%
+				background-color: #838584
+				margin: 0 auto
+		
+			.col2 
+				width: 100%
+	
+
+	/*______________SECTION DESCRIPTION_________________*/
+
+	section.numbers 
+		display: table
+		width: 100%
+		height: auto
+		justify-content: center
+	
+		.row 
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: center
+			width: 100%
+			height: auto
+			text-align: center
+			margin: 0 auto
+	
+			.col 
+				width: 50%
+				height: 200px
+	
+@media (max-width: 766px) and (min-width: 481px)
+	
+	/* __________NAV STYLE_____________*/
+
+	nav.container 
+		position: relative
+		height: 50px
+		margin: 0
+		line-height: 0
+		text-align: center
+
+		ul.nav 
+			display: none
+			position: absolute
+			top: 50px
+			width: 100%
+			margin: 0
+			padding: 0
+			z-index: 998
+
+			li 
+				display: block
+				height: 30px
+				padding: 0%
+				list-style: none
+				width: 100%
+				text-align: center
+				border-left: 1px solid white
+				z-index: 997
+
+				a 
+					display: inline-block
+					height: 30px
+					width: 100%
+					padding: 0%
+					font-size: 16px
+					line-height: 28px
+					text-transform: uppercase
+					text-decoration: none
+					font-family: $fontFamilly
+					font-weight: 700
+					color: white
+					background-color: rgba(0, 0, 0, 0.5)
+					border: 0 0 1px 0  solid white
+					&:hover 
+						color: $linkHover
+						border-bottom: 2px solid $linkHover
+		.img 
+			float: left
+			height: 50px
+			width: 90%
+	
+			img 
+				position: absolute
+				height: auto
+				width: 150px
+				left: 0%
+				top: 10px
+				cursor: pointer
+	
+		label
+			position: absolute
+			right: 0
+			top:  0
+			padding-top: 25px
+			display: block
+			float: right
+			height: 50px
+			width: 10%
+			font-size: 30px
+			text-shadow: 1px 1px 1px #CCC
+			font-weight: bold
+			color: white
+			cursor: pointer
+	
+		#menu-nav:not(:checked) ~.nav 
+			display: none
+
+		#menu-nav:checked ~.nav 
+			display: block
+	
+	/*______________SECTION HERO_________________*/
+
+	section.hero .slogan 
+		width: 80%
+		padding-right: 5%
+
+		h1 
+			font-size: 2.2rem
+			line-height: 2.4rem
+	
+	/*______________SECTION ADVENTAGE_________________*/
+
+	section.advantage 
+		height: auto
+	
+		.common 
+			height: auto
+			width: 100%
+	
+			[class*="desc"]
+				display: block
+				width: 100%
+				padding: 3.33%
+	
+	/*______________SECTION GALLERY_________________*/
+
+	section.gallery
+		position: relative
+		display: flex
+		justify-content: center
+		max-width: 1926px
+		width: 100%
+		height: 1000px
+		margin: 0 auto
+
+		.container
+			display: block
+			float: left
+			text-align: center
+			height: auto
+			width: auto
+			line-height: 0
+
+			.layer
+				position: relative
+				display: block
+				text-align: center
+				height: 200px
+				width: 200px
+				max-width: 200px
+
+				> img 
+					width: 200px
+					height: 100%
+		
+	/*______________SECTION TEAM_________________*/
+
+	section.team 
+		height: auto
+	
+		div.row1 
+			width: 100%
+			height: auto
+			margin: 0
+			text-align: center
+
+			.col 
+				float: left
+				width: 50%
+				margin: 0
+				&:last-child 
+					margin-bottom: 40px
+	
+				.people 
+					position: relative
+					display: inline-block
+					max-width: 200px
+					min-width: 180px
+					max-height: 200px
+					min-height: 180px
+					margin: 30px 10px
+					padding: 10px 0px
+					text-align: center
+
+					h2 
+						display: inline-block
+						margin-top: 200px
+						margin-bottom: 10px
+
+					div.function 
+						display: block
+						position: absolute
+						top: 0
+						left: 0
+						width: inherit
+						height: inherit
+						margin-top: 0
+						text-align: center
+
+						p 
+							margin-top: 40%
+	
+			/*______________SECTION DESCRIPTION_________________*/
+
+	section.description .container
+		width: 100%
+		height: auto
+		margin: 0 auto
+	
+		> .row
+			width: 100%
+			height: 300px
+	
+		> [class*="col"]
+			height: 300px
+			padding: 0
+			margin: 0
+	
+			.col1 
+				float: left
+				width: 100%
+				background-color: #838584
+				margin: 0 auto
+	
+			.col2 
+				width: 100%
+	
+		/*______________SECTION DESCRIPTION_________________*/
+
+	section.numbers 
+		display: table
+		width: 100%
+		height: auto
+		justify-content: center
+
+		.row 
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: center
+			width: 100%
+			height: auto
+			text-align: center
+			margin: 0 auto
+
+			.col 
+				width: 50%
+				height: 200px
+
+		/*______________FOOTER_________________*/
+	footer div.row1 .col 
+		width: 100%
+		height: auto
+		&:last-of-type 
+			padding-bottom: 30px
+
+
+@media (max-width: 480px)
+	
+	/* __________NAV STYLE_____________*/
+
+	label 
+		display: none
+
+	nav.container 
+		position: relative
+		height: 50px
+		margin: 0
+		line-height: 0
+		text-align: center
+
+		.img 
+			float: left
+			height: 50px
+			width: 90%
+	
+			> img 
+				position: absolute
+				height: auto
+				width: 150px
+				top: 50%
+				left: 50%
+				transform: translateX(-50%) translateY(-50%)
+				cursor: pointer
+
+		ul.nav 
+			display: block
+			position: absolute
+			top: 50px
+			width: 100%
+			margin: 0
+			padding: 0
+			z-index: 998
+
+			li 
+				display: block
+				height: 30px
+				padding: 0%
+				list-style: none
+				width: 100%
+				text-align: center
+				border-left: 1px solid white
+				z-index: 997
+	
+				a 
+					display: inline-block
+					height: 30px
+					width: 100%
+					padding: 0%
+					font-size: 16px
+					line-height: 28px
+					text-transform: uppercase
+					text-decoration: none
+					font-family: $fontFamilly
+					font-weight: 700
+					color: white
+					background-color: rgba(0, 0, 0, 0.7)
+					border: 0 0 1px 0  solid white
+					&:hover 
+						color: $linkHover
+						border-bottom: 2px solid $linkHover
+	
+	/*______________SECTION HERO_________________*/
+
+	section.hero .slogan 
+		position: absolute
+		right: 0
+		top: 230px
+		-webkit-border-radius: 10px 0 0 10px
+		border-radius: 10px 0 0 10px
+		width: 90%
+		height: auto
+		padding-right: 5%
+
+		h1 
+			font-size: 2.2rem
+			line-height: 2.4rem
+	
+	/*______________SECTION ADVENTAGE_________________*/
+
+	section.advantage 
+		height: auto
+	
+		.common 
+			height: auto
+			width: 100%
+
+			[class*="desc"]
+				display: block
+				width: 100%
+				padding: 3.33%
+	
+	/*______________SECTION HEADING_________________*/
+
+	section.heading 
+		max-width: 1926px
+		width: 100%
+		height: auto
+
+	/*______________SECTION GALLERY_________________*/
+
+	section.gallery 
+		position: relative
+		max-width: 1926px
+		height: 2000px
+	
+		.container 
+			display: flex
+			flex-direction: column
+			align-items: center
+			height: auto
+			width: 100%
+			line-height: 0
+	
+			.layer 
+				position: relative
+				text-align: center
+				height: 200px
+				width: 200px
+	
+				> img 
+					width: 200px
+					height: 100%
+	
+	/*______________SECTION TEAM_________________*/
+
+	section.team 
+		position: static
+		height: auto
+	
+		div.row1 
+			display: table
+			width: 100%
+			height: auto
+			margin: 0
+			text-align: center
+	
+			.col 
+				float: left
+				width: 100%
+				margin: 0
+				&:last-child 
+					margin-bottom: 40px
+
+				.people 
+					position: relative
+					display: inline-block
+					margin: 30px
+					padding: 10px 0px
+					text-align: center
+
+					h2 
+						display: inline-block
+						margin-top: 200px
+						margin-bottom: 10px
+		
+					div.function 
+						display: block
+						position: absolute
+						top: 0
+						left: 0
+						width: inherit
+						height: inherit
+						margin-top: 0
+						text-align: center
+		
+						p 
+							margin-top: 40%
+	
+	/*______________SECTION DESCRIPTION_________________*/
+
+	.description .container
+		width: 100%
+		height: auto
+		margin: 0 auto
+	
+	.description .row
+		width: 100%
+		height: 300px
+
+		> [class*="col"]
+			height: 300px
+			padding: 0
+			margin: 0
+	
+		.col1 
+			float: left
+			width: 100%
+			background-color: #838584
+			margin: 0 auto
+	
+		.col2
+			height: auto
+			padding: 0
+			margin: 0
+			width: 100%
+	
+			.sub-row 
+				width: 100%
+				height: auto
+				overflow: hidden
+				height: auto
+
+				.sub-col1 
+					float: left
+					width: 100%
+					height: auto
+					padding: 0 5%
+
+					p
+						margin-top: 0
+						color: #FFF
+						font-family: $fontFamilly
+						font-size: .9rem
+						line-height: 1.5rem
+
+				.sub-col2 
+					float: left
+					width: 100%
+					height: auto
+					padding: 0 5%
+
+					p
+						margin-top: 0
+						color: #FFF
+						font-family: $fontFamilly
+						font-size: .9rem
+						line-height: 1.5rem	
+				h1 
+					margin-left: 10%
+					margin-top: 4%
+					color: #FFF
+					font-family: $fontFamilly
+					text-transform: uppercase
+					font-size: 1.5rem
+					font-weight: 900
+	
+	/*______________SECTION NUMBERS_________________*/
+
+	section.numbers 
+		display: table
+		width: 100%
+		height: auto
+		justify-content: center
+	
+		.row 
+			display: flex
+			flex-direction: column
+			justify-content: center
+			width: 100%
+			height: auto
+			text-align: center
+			margin: 0 auto
+	
+			.col 		
+				width: 100%
+				height: 200px
+	
+	/*______________FOOTER_________________*/
+
+	footer div.row1 .col 
+		width: 100%
+		height: auto
+		&:last-of-type 
+			padding-bottom: 30px
+
+	footer div.row2 > div.pos-center 
+		height: auto
